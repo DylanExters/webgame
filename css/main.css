@@ -18,6 +18,7 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 }
 
 .main {
+    position:relative;
     height: 608px;
     width: 800px;
     margin: auto;
@@ -40,7 +41,7 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 }
 
 #character {
-    margin: 200px 0px 0px 0px;
+    position: absolute;
     z-index: 200;
 
 }
