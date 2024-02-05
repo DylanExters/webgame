@@ -1,9 +1,22 @@
-#title {
+body {
+display: flex;
+flex-direction: column;
+background-color: black;
 
 }
 
-#main {
+.reset {
+    clear: both;
+}
 
+/* divs */
+#title {
+ color: white;
+ text-align: center;
+}
+
+#main {
+text-align: center;
 }
 
 #inventory {
