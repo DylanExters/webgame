@@ -51,12 +51,21 @@ body {
     #door1 {
         width: 64px;
         height: 64px;
-        background-color: #fb00ff;
-        opacity: 0.2;
+        background-color: #0000ff;
+        opacity: 0.8;
         top: 150px;
         left: 400px;
         position: absolute;
 
+    }
+
+    #sign {
+        width: 46px;
+        height: 32px;
+        background-color: rgb(94, 58, 17);
+        top: 450px;
+        left: 10px;
+        position: absolute;
     }
     
     #line {
