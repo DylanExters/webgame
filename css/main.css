@@ -1,64 +1,76 @@
 body {
-display: flex;
-flex-direction: column;
-background-color: black;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-
-}
-
-/* RESET */
-.reset {
-    clear: both;
-}
-
-/* divs */
-#title {
-    color: white;
-    text-align: center;
-}
-
-.main {
-    position:relative;
-    height: 608px;
-    width: 800px;
-    margin: auto;
-    background-image: url("../assets/tilemap1.jpg");
-    border-radius: 8px;
-
-}
-
-#inventory {
-   color: white;
-   font-size: 10px;
-   text-align: center;
-   border-radius:5px;
-    width: 210px;
-    height: 140px;
-    background-color: rgba(91, 46, 1, 0.72);
-    margin: 0px 0px 0px 8px ;
-    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     
-}
+    }
+    
+    /* RESET */
+    .reset {
+        clear: both;
+    }
+    
+    /* divs */
+    #title {
+        color: white;
+        text-align: center;
+    }
+    
+    #gameWindow {
+        position:relative;
+        height: 608px;
+        width: 800px;
+        margin: auto;
+        background-image: url("../assets/tilemap1.jpg");
+        border-radius: 8px;
+    }
+    
+    #inventory {
+       color: white;
+       font-size: 10px;
+       text-align: center;
+       border-radius:5px;
+        width: 210px;
+        height: 140px;
+        background-color: rgba(91, 46, 1, 0.72);
+        margin: 0px 0px 0px 8px ;
+        z-index: 100;
+        
+    }
+    
+    #character {
+        position: absolute;
+        z-index: 200;
+        left: 370px;
+        top: 304px;
+        transition: ease-in-out 1.5s;
+    
+    }
 
-#character {
-    position: absolute;
-    z-index: 200;
+    #door1 {
+        width: 64px;
+        height: 64px;
+        background-color: #fb00ff;
+        opacity: 0.2;
+        top: 150px;
+        left: 400px;
+        position: absolute;
 
-}
-
-#line {
-    width: 800px;
-    height: 50px;
-    background-color: rgba(91, 46, 1, 0.80);
-    margin: 405px 0px 0px 0px;
-    border-radius: 0px 0px 8px 8px;
-    color: white;
-    font-size: 10px;
-    text-align: center;
-    z-index: 100;
-}
-
-#npc {
-
-}
-
+    }
+    
+    #line {
+        width: 800px;
+        height: 50px;
+        background-color: rgba(91, 46, 1, 0.80);
+        margin: 405px 0px 0px 0px;
+        border-radius: 0px 0px 8px 8px;
+        color: white;
+        font-size: 10px;
+        text-align: center;
+        z-index: 100;
+    }
+    
+    #npc {
+    
+    }
