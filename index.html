@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    
-    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Protest+Riot&display=swap"
+        rel="stylesheet">
+
+    <title>point and click adventure</title>
 </head>
+
 <body>
-    <div id="title"><h1>Point and click</h1></div>
-
- <div class="reset"></div>
-
-    <div id="gameWindow">
-        
-        <div id="inventory"> <h1>Inventory:</h1> </div>
-        <div id="character"> <img src="assets/cape_man/animated-character-1-idle.gif" draggable="false" alt="character"></div>
-        <div id="line"><h2>NPC: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s t is a long established fact that a reader will be distracted by the readable content</h2> </div>
-        <div id="npc"> </div>
-        <div id="door1" class="foreground"> </div>
-        <div id="sign" class="foreground"> </div>
+    <div id="title">
+        <h1 id="mainTitle"></h1>
     </div>
 
+    <div id="gameWindow">
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <div id="mainCharacterAvatar" class="foreground">
+                    <img src="assets/cape_man/portairt.png" alt="main character avatar">
+                </div>
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterAvatar" class="foreground">
+                    <img id="counterAvatarImg" src="assets/gost/ghost_speak.png" alt="counter avatar">
+                </div>
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="inventoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+
+        </div>
+
+        <!--Foreground items-->
+        <div id="key1" class="foreground"><img src="assets/key.png" id="key1" alt="key"></div>
+        <div id="door1" class="foreground"></div>
+        <div id="door2" class="foreground"></div>
+
+        <div id="sign" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
+
+        <!--Main character-->
+        <div id="mainCharacter" class="heroCharacter">
+            <img id="mcImage" draggable="false" src="assets/cape_man/animated-character-1-idle.gif" alt="main character">
+        </div>
+
+        <!--Background-->
+        <div id="tilemap" class="background">
+            <img src="assets/tilemap1.jpg" draggable="false" alt="tilemap level 1">
+        </div>
+    </div>
+
+    <audio id="mcAudio">
+        <source src="assets/audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="cAudio">
+        <source src="assets/audio/high pitch voice.mp3" type="audio/mpeg">
+    </audio>
     <script src="js/main.js"></script>
 </body>
+
 </html>

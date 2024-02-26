@@ -1,85 +1,181 @@
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    
-    }
-    
-    /* RESET */
-    .reset {
-        clear: both;
-    }
-    
-    /* divs */
-    #title {
-        color: white;
-        text-align: center;
-    }
-    
-    #gameWindow {
-        position:relative;
-        height: 608px;
-        width: 800px;
-        margin: auto;
-        background-image: url("../assets/tilemap1.jpg");
-        border-radius: 8px;
-    }
-    
-    #inventory {
-       color: white;
-       font-size: 10px;
-       text-align: center;
-       border-radius:5px;
-        width: 210px;
-        height: 140px;
-        background-color: rgba(91, 46, 1, 0.72);
-        margin: 0px 0px 0px 8px ;
-        z-index: 100;
-        
-    }
-    
-    #character {
-        position: absolute;
-        z-index: 200;
-        left: 370px;
-        top: 304px;
-        transition: ease-in-out 1.5s;
-    
-    }
+    display: grid;
+    grid-template-columns: auto 800px auto;
+    grid-template-rows: auto 608px auto;
+    gap: 20px;
+    margin: 0px;
+    background-color: #000000;
+    font-family: 'Protest Riot', sans-serif;
+}
 
-    #door1 {
-        width: 64px;
-        height: 64px;
-        background-color: #0000ff;
-        opacity: 0.8;
-        top: 150px;
-        left: 400px;
-        position: absolute;
+h1 {
+    color: white;
+}
 
-    }
+p {
+    margin: 0px;
+}
 
-    #sign {
-        width: 46px;
-        height: 32px;
-        background-color: rgb(94, 58, 17);
-        top: 450px;
-        left: 10px;
-        position: absolute;
-    }
-    
-    #line {
-        width: 800px;
-        height: 50px;
-        background-color: rgba(91, 46, 1, 0.80);
-        margin: 405px 0px 0px 0px;
-        border-radius: 0px 0px 8px 8px;
-        color: white;
-        font-size: 10px;
-        text-align: center;
-        z-index: 100;
-    }
-    
-    #npc {
-    
-    }
+/*ID's */
+
+#title {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+#gameWindow {
+    position: relative;
+    width: 800px;
+    height: 608px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+    background-color: blue;
+}
+
+/*Main charcater*/
+#mainCharacter {
+    width: 32px;
+    height: 32px;
+    left: 400px;
+    top: 304px;
+}
+
+/*Foreground Items*/
+#door1 {
+    width: 64px;
+    height: 64px;
+    opacity: 1;
+    top: 66px;
+    left: 480px;
+}
+
+#door2 {
+    width: 44px;
+    height: 54px;
+    /* background-color: #fb00ff; */
+    top: 296px;
+    left: 169px;
+}
+
+#key1 {
+    width: 20%;
+    opacity: 1;
+    top: 325px;
+    left: 715px;
+}
+
+#sign {
+    width: 64px;
+    height: 32px;
+    background-color: #442c1c;
+    top: 450px;
+    left: 10px;
+}
+
+#statue {
+    width: 32px;
+    height: 64px;
+    top: 284px;
+    left: 704px;
+}
+
+/*Inventory box*/
+#inventoryBox {
+    position: relative;
+    display: block;
+    left: 10px;
+    top: 10px;
+    width: 180px;
+    height: 80px;
+    color: white;
+    background-color: #602d00;
+    border: white 1px solid;
+    padding: 10px;
+}
+
+/*Dialog part*/
+#dialogBar {
+    bottom: 0px;
+}
+
+#setMainDialog {
+    position: relative;
+    height: 64px;
+    width: 800px;
+}
+
+#brownBar {
+    position: absolute;
+    height: 32px;
+    width: 800px;
+    background-color: #442c1c;
+    bottom: 0px;
+}
+
+#mainCharacterAvatar {
+    left: 0px;
+    bottom: 0px;
+    width: 72px;
+    height: 68px;
+}
+
+#mainCharacterSpeech {
+    left: 72px;
+    top: 0px;
+}
+
+#counterAvatar {
+    right: 0px;
+    bottom: 0px;
+    width: 72px;
+    height: 68px;
+}
+
+#counterAvatarImg {
+    opacity: 0;
+}
+
+#counterSpeech {
+    right: 72px;
+    top: 0px;
+}
+
+#tilemap {
+    width: 800px;
+    height: 608px;
+    top: 0px;
+    left: 0px;
+}
+
+
+/*Classes*/
+.foreground {
+    position: absolute;
+    z-index: 1000;
+    transition: all 1s ease-in-out;
+}
+
+.heroCharacter {
+    position: absolute;
+    z-index: 100;
+    transition: all 1s ease-in-out;
+}
+
+/*Background */
+.background {
+    position: absolute;
+    z-index: 0;
+}
+
+.speech-bubble {
+    background-color: #FFFFFF;
+    border-radius: 60px;
+    color: #000000;
+    padding: 5px 5px 5px 20px;
+    font-size: 12px;
+    width: 300px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
