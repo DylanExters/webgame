@@ -10,6 +10,7 @@ gameState = {
     ]
 }
 
+
 const sec = 1000;
 
 //Main Character
