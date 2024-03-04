@@ -4,7 +4,7 @@ document.getElementById("mainTitle").innerText = "Point and Click adventure game
 const gameWindow = document.getElementById("gameWindow");
 
 //Game state
-gameState = {
+let gameState = {
     "door2locked": true,
     "inventory": [
     ]
@@ -96,7 +96,6 @@ gameWindow.onclick = function (e) {
             break;
 
     }
-
 }
 
 /**
