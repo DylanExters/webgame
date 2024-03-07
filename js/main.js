@@ -45,12 +45,20 @@ gameWindow.onclick = function (e) {
     console.log(e.target.id);
     switch (e.target.id) {
 
-        case "statue":
+        case "key1":
             sign.style.opacity = 1;
             if (document.getElementById("key1") !== null) {
                 console.log('Found key!');
                 document.getElementById("key1").remove();
                 changeInventory('key', 'add');
+                showMessage(mainCharacterSpeech, mcAudio, "Hey i found a key..");
+                setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
+                setTimeout(showMessage, 2 * sec, counterSpeech, cAudio, "Boo!!");
+                setTimeout(showMessage, 5 * sec, mainCharacterSpeech, mcAudio, "Ahhh! a ghost.");
+                setTimeout(showMessage, 8 * sec, counterSpeech, cAudio, "Calm down im here to help you.");
+                setTimeout(showMessage, 11 * sec, mainCharacterSpeech, mcAudio, "Do you know what the key is for?");
+                setTimeout(showMessage, 15 * sec, counterSpeech, cAudio, "You should check the big barn...");
+                setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 114 * sec);
             }
 
             break;
@@ -62,6 +70,7 @@ gameWindow.onclick = function (e) {
                     gameState.door2locked = false;
                     changeInventory('key', 'delete');
                     console.log('Door unlocked!');
+                 
 
                 } else {
                     //no -> alert 'door locked'
@@ -80,12 +89,7 @@ gameWindow.onclick = function (e) {
             break;
 
         case "statue":
-            showMessage(mainCharacterSpeech, mcAudio, "Wow cool statue..");
-            setTimeout(function () { counterAvatarImg.style.opacity = 1; }, 4 * sec);
-            setTimeout(showMessage, 4 * sec, counterSpeech, cAudio, "I can talk you know..dummy");
-            setTimeout(showMessage, 8 * sec, mainCharacterSpeech, mcAudio, "You don't have to be so mean.");
-            setTimeout(showMessage, 12 * sec, counterSpeech, cAudio, "You should check the north house..");
-            setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 16 * sec);
+            
             break;
 
         default:
