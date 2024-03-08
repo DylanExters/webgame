@@ -59,6 +59,46 @@ p {
     left: 270px;
 }
 
+#door3 {
+    width: 34px;
+    height: 44px;
+ /* background-color: #fb00ff5f; */
+ left: 135.5px;
+ top: 566.125px;
+}
+
+#door4 {
+    width: 34px;
+    height: 44px;
+ /* background-color: #0000005f; */
+ left: 489.5px;
+ top: 582.125px;
+}
+
+#door5 {
+    width: 34px;
+    height: 44px;
+ /* background-color: #1900ff5f; */
+ left: 599.5px;
+ top: 582.125px;
+}
+
+#door6 {
+    width: 34px;
+    height: 44px;
+ /* background-color: #2fff005f; */
+ left: 638.5px;
+ top: 301.125px;
+}
+
+#door7 {
+    width: 34px;
+    height: 44px;
+ /* background-color: #ff00005f; */
+ left: 658.5px;
+ top: 194.125px;
+}
+
 #key1 {
     width: 18%;
     opacity: 1;

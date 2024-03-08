@@ -31,6 +31,8 @@ const inventoryList = document.getElementById("inventoryList"); //ul
 const door1 = document.getElementById("door1");
 const sign = document.getElementById("sign");
 
+showMessage(counterSpeech, mcAudio, "Hey i should probely find a key..");
+
 
 
 gameWindow.onclick = function (e) {
@@ -57,7 +59,7 @@ gameWindow.onclick = function (e) {
                 setTimeout(showMessage, 5 * sec, mainCharacterSpeech, mcAudio, "Ahhh! a ghost.");
                 setTimeout(showMessage, 8 * sec, counterSpeech, cAudio, "Calm down im here to help you.");
                 setTimeout(showMessage, 11 * sec, mainCharacterSpeech, mcAudio, "Do you know what the key is for?");
-                setTimeout(showMessage, 15 * sec, counterSpeech, cAudio, "You should check the big barn...");
+                setTimeout(showMessage, 15 * sec, counterSpeech, cAudio, "You should check the barns in the area...");
                 setTimeout(function () { counterAvatarImg.style.opacity = 0; }, 114 * sec);
             }
 
@@ -70,6 +72,7 @@ gameWindow.onclick = function (e) {
                     gameState.door2locked = false;
                     changeInventory('key', 'delete');
                     console.log('Door unlocked!');
+                    alert("YOU WIN!!! :)."); 
                  
 
                 } else {
@@ -79,8 +82,29 @@ gameWindow.onclick = function (e) {
             } else {
                 console.log('enter building');
             }
-
+        
             break;
+
+        case "door3":
+        alert("Wrong door my friend!."); 
+
+        break;
+        case "door4":
+        alert("Get out of here!!."); 
+                
+        break;
+        case "door5":
+        alert("...."); 
+                
+        break;
+        case "door6":
+        alert("NO!"); 
+                
+        break;
+        case "door7":
+        alert("Not here."); 
+                
+        break;
 
         case "sign":
 
